@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+
+         <title>GrandPyBot</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="col-lg-12" id='logo_grandpy'><img src="{{ url_for('static', filename='logo_grandpy.png') }}"  alt="McCarthy's head 'cause he is cool" /></div>
+                </div>
+            </header>
+
+
+            <div class='row' id="central_zone">
+
+                <div class="col-lg-6" id="dialog_box">
+                    <p>Zone de dialogue</p>
+                </div>   
+
+                <div class="col-lg-6" id="map">
+                    <p>Zone de la map</p>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12" id='myself'>Vincent Dion</div>
+                    <div class="col-lg-12" id='logo_github'><a href="https://github.com/VincentDion/Project7OC"><img src="{{ url_for('static', filename='logo_github.png') }}" alt="Logo GitHub" /></a></div>
+                </div>
+
+            </footer>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!--
+        <script>
+            // Initialize and add the map
+            function initMap() {
+            // The location of searching place
+            var searchedLocation = {lat: 48.8747, lng: 2.3505};
+            // The map, centered at searching place
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 16, center: searchedLocation});
+            // The marker, positioned at searching place
+            var marker = new google.maps.Marker({position: searchedLocation, map: map});
+            }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=APIKEYHERE&callback=initMap">
+        </script>
+        <script type="text/javascript" src="{{ url_for('static', filename='scriptDialog.js') }}"></script> -->
+    </body>
+
+</html>

@@ -1,0 +1,76 @@
+
+body {
+    padding-top: 10px;
+    background-color: #D6EAF8;
+    margin: 5px;
+}
+
+#logo_grandpy img
+{
+    width:184px;
+    height:154px;
+}
+
+#logo_grandpy
+{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#logo_github img
+{
+    width:40px;
+    height:40px;
+}
+
+#myself
+{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#logo_github
+{
+    text-align: center;
+}
+
+#dialog_box
+{
+    padding-bottom: 10px;
+    height: 400px;
+    background-color: whitesmoke;
+    text-align: justify;
+    overflow: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#map
+{
+    padding-bottom: 10px;
+    height: 400px;
+    background-color: whitesmoke;
+    text-align: justify;
+    overflow: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+
+}
+
+#central_zone
+{
+    padding-bottom: 10px;
+}
+
+.msg {
+    padding: 3px;
+    margin: 4px 0;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}

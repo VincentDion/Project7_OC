@@ -19,15 +19,22 @@
                 </div>
             </header>
 
+            <div class="input-group mb-3">
+                <input name="question" type="text" class="form-control" placeholder="Entrez votre question et appuyer sur Valider" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="submit">Valider</button>
+                </div>
+            </div>
 
             <div class='row' id="central_zone">
 
                 <div class="col-lg-6" id="dialog_box">
-                    <p>Zone de dialogue</p>
-                </div>   
+                    <div class="msg"><p><strong>Grandpy: </strong>Qu'est que vous voulez savoir?</p></div>
+                </div>
+ 
+                <!-- I need to find a way to add a little spacing between thsoe two boxes -->
 
                 <div class="col-lg-6" id="map">
-                    <p>Zone de la map</p>
                 </div>
 
             </div>
@@ -37,7 +44,6 @@
                     <div class="col-lg-12" id='myself'>Vincent Dion</div>
                     <div class="col-lg-12" id='logo_github'><a href="https://github.com/VincentDion/Project7OC"><img src="{{ url_for('static', filename='logo_github.png') }}" alt="Logo GitHub" /></a></div>
                 </div>
-
             </footer>
 
         </div>

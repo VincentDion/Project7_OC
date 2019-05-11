@@ -70,7 +70,5 @@ body {
 .msg {
     padding: 3px;
     margin: 4px 0;
-    border: 2px solid #dedede;
-    background-color: #f1f1f1;
     border-radius: 5px;
 }

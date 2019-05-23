@@ -8,7 +8,9 @@ $(function() {
         else {
             addMsg("user", userInput);
             
-            $.getJSON(          
+            $.getJSON(
+                // documentation : https://api.jquery.com/jquery.getjson/
+
                 //url
                 '/_get_json',               
                 //data
@@ -20,10 +22,12 @@ $(function() {
                         addMsg("grandpy", data.message1);
                     }
                     else {
-                        addMsg("grandpy", data.message1);
+                        addMsg("grandpy", data.message1 + data.message5);
                         var latitude = data.latitude;
                         var longitude = data.longitude;
 
+                        addMsg("grandpy", data.message2 + data.message3);
+                        addMsg("grandpy", data.message4);
                         initMap(latitude, longitude);
                     }
                 }
@@ -58,11 +62,11 @@ function addMsg(speaker, message) {
 
 function initMap(latitude, longitude) {
     // The location of searching place
-    var searchedLocation = {lat: latitude, lng: longitude};
+    var pos = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
     // The map, centered at searching place
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 16, center: searchedLocation});
+        document.getElementById('map'), {zoom: 14, center: pos});
     // The marker, positioned at searching place
-    var marker = new google.maps.Marker({position: searchedLocation, map: map});
+    var marker = new google.maps.Marker({position: pos, map: map});
 }
 

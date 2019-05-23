@@ -1,6 +1,6 @@
 # -*- coding: Utf-8 -*
 
-#On précise le path sinon ça fait planter pytest
+# Path precision for Pytest purposes
 import sys
 sys.path.append('..')
 
@@ -11,13 +11,20 @@ import json
 class PlaceSearch:
 
     def __init__(self, api_key):
+        """ 
+        API key must be provided.
+        No API key available in the source code.
+        """
         self.api_key = api_key
 
     def localize(self, parsed_user_input):
-        """ Link with google place search to find the adress and geographical coordinates """
-        research_url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/\
-json?input=%s&inputtype=textquery&language=fr&fields=formatted_address,name,geometry\
-&key=%s' % (parsed_user_input, self.api_key)
+        """ 
+        Link with google place search to find the adress and geographical 
+        coordinates. We set the research in French for better accuracy.
+        """
+        research_url = 'https://maps.googleapis.com/maps/api/place/findplacefro\
+mtext/json?input=%s&inputtype=textquery&language=fr&fields=formatted_address,na\
+me,geometry&key=%s' % (parsed_user_input, self.api_key)
 
         r = requests.get(url=research_url)
         data_dict = r.json()
@@ -33,7 +40,7 @@ json?input=%s&inputtype=textquery&language=fr&fields=formatted_address,name,geom
             longitude = t_location.get("lng")
             latitude = t_location.get("lat")
             return {
-                "adress" : address,
+                "address" : address,
                 "longitude" : longitude,
                 "latitude" : latitude
             }

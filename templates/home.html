@@ -7,11 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+        <!-- URL directly created by Flask -->
+
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Do not use a slim version, for json purposes -->
 
         <title>GrandPyBot</title>
 
         <script async type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        <!-- URL directly created by Flask -->
     
     </head>
 
@@ -33,9 +37,8 @@
             <div class='row' id="central_zone">
 
                 <div class="col-lg-6" id="dialog_box">
-                    <div class="msg"><p><strong>Grandpy: </strong>Qu'est que vous voulez savoir?</p></div>
+                    <div class="msg"><p><strong>Grandpy: </strong>Salut la jeunesse ! Dis moi ce que tu cherches.</p></div>
                 </div>
- 
                 <!-- I need to find a way to add a little spacing between those two boxes -->
 
                 <div class="col-lg-6" id="map">
@@ -55,22 +58,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        <!--
-        <script>
-            // Initialize and add the map
-            function initMap() {
-            // The location of searching place
-            var searchedLocation = {lat: 48.8747, lng: 2.3505};
-            // The map, centered at searching place
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 16, center: searchedLocation});
-            // The marker, positioned at searching place
-            var marker = new google.maps.Marker({position: searchedLocation, map: map});
-            }
-        </script>
-        -->
         <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=APIKEYHERE&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap">
         </script>
         
     </body>

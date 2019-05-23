@@ -76,16 +76,37 @@ NEW_STOP_WORDS = ['', '?', '!', '@', 'ca', 'trouve', 'salut', 'grandpy',
 
 APP_STOP_WORDS = BASE_STOP_WORDS + NEW_STOP_WORDS
 
-"""
-INTRO_DIALOGS = {40: "Salut la jeunesse !", 70: "Coucou loulou !", 95: "Qu'est ce que t'as grandi !", 100: "C'est papy Mougeot !"}
 
-SHOW_OFF_DIALOGS = {15: "Je t'ai déjà raconté la fois où j'ai détruit un char en tirant dans le canon ?",
-30: "Une fois j'ai retrouvé un soldat allié en sifflant 'tea for two' sous la douche publique.",
-45: "Ils sont marrant tes habits, tu me rapelles ce jeune qui, en '55, m'avait dit qu'il venait du futur, c'était un original çui-là.",
-60: "Aujourd'hui j'ai croisé un grand monsieur, il m'a rapellé un autre, en '84, qui cherchait une Zara Commore, je crois.",
-70: "Tu sais qui gagnerait entre Rocky et un serpent ? Rocky, Rocky Balboa !",
-85: "Pense bien à mettre des chaussures, j'ai marché sur du verre une fois que je combattais des terroristes allemands, ça fait mal",
-100: "J'ai été acteur y a 30 ans tu sais ? Je devais faire chaque jour des gestes du quotidien dans un village sous une grande sphère de métal"}
+INSUFFICIENT_INPUT_MSGS = ["Désolé loulou, j'ai pas bien compris ce que tu \
+recherches", "Désolé mon enfant, va falloir m'en dire plus"]
 
-QUESTION_DIALOGS = "Alors, qu'est ce que tu veux savoir ?"
-"""
+START_SEARCH_MSGS = ["Attends un peu que je me souvienne ...", "Ca me dit ptet'\
+ queq'chose, attends voir ...", "Minute papillon, faut faire démarrer le moteur\
+ ...", "Je suis trop vieux pour ces co*** ...", "Bouge pas ça va me revenir ..."
+]
+
+NO_LOCATION_MSGS = ["Ca m'dit un truc mais impossible de m'en souvenir, tu \
+peux être plus précis ?", "Rah j'ai la mémoire qui flanche, tu peux m'aider un \
+peu en étant plus précis ?", "T'es sûr que ça existe ça ? C'est vers où ?"]
+
+LOCATION_FOUND_MSGS = ["Si ma mémoire est bonne, l'adresse c'est ",
+"Oula ça me revient, l'adresse c'est "]
+
+WIKIPEDIA_INTRO_MSGS = ["D'ailleurs laisse moi te dire un petit truc à ce \
+propos. ", "J'sais pas si tu sais mais laisse moi te raconter un truc. "]
+
+WIKIPEDIA_NOT_FOUND = ["Bon par contre j'ai rien à te dire sur ce lieu", "En \
+revanche, je connais pas assez cet endroit pour t'en dire plus"]
+
+SHOW_OFF_MSGS = ["A part ça, je t'ai déjà raconté la fois où j'ai détruit un \
+char en tirant dans le canon ?", "Sinon je t'ai déjà dit qu'une fois j'ai \
+retrouvé un soldat allié en sifflant 'tea for two' sous la douche publique.",
+"Ils sont marrant tes habits, tu me rapelles ce jeune qui, en '55, m'avait dit \
+qu'il venait du futur, c'était un original çui-là.", "Sinon aujourd'hui j'ai \
+croisé un grand monsieur, il m'a rapellé un autre, en '84, qui cherchait une \
+Zara Commore, ou quelqu'chose du genre.", "A part ça, tu sais qui gagnerait \
+entre Rocky et un serpent ? Rocky, Rocky Balboa !", "Voilà, maintenant pense \
+bien à mettre des chaussures, j'ai marché sur du verre une fois que je \
+combattais des terroristes allemands, ça fait mal", "Sinon j'ai été acteur y a \
+30 ans tu sais ? Je devais faire chaque jour des gestes du quotidien dans un \
+village sous une grande sphère de métal"]

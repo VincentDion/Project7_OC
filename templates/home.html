@@ -23,16 +23,20 @@
         <div class="container">
             <header>
                 <div class="row">
-                    <div class="col-lg-12" id='logo_grandpy'><img src="{{ url_for('static', filename='logo_grandpy.png') }}"  alt="McCarthy's head 'cause he is cool" /></div>
+                    <div class="col-lg-12" id='logo_grandpy'><a href="https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)"><img src="{{ url_for('static', filename='logo_grandpy.png') }}"  alt="McCarthy's head 'cause he is cool" /></a></div>
                 </div>
             </header>
 
-            <div class="input-group mb-3">
-                <input name="question" type="text" class="form-control" placeholder="Entrez votre question et appuyer sur Valider" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="submit">Valider</button>
+            <div class="test">
+                <div class="input-group mb-3">
+                    <input name="question" type="text" class="form-control" placeholder="Entrez votre question et appuyer sur Valider" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="submit">Valider</button>
+                    </div>
                 </div>
             </div>
+
+            <div class="loader"></div>
 
             <div class='row' id="central_zone">
 

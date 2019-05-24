@@ -1,12 +1,13 @@
 $(function() {
     $('#submit').on('click', function() {
         var userInput = $('input[name="question"]').val();
-        $(".input-group-append").css({visibility:"hidden"});
         if (userInput == "") {
             null;
         }
         else {
             addMsg("user", userInput);
+            $(".loader").css({display:"block"});
+            $(".test").css({display:"none"});
             
             $.getJSON(
                 // documentation : https://api.jquery.com/jquery.getjson/
@@ -28,12 +29,14 @@ $(function() {
 
                         addMsg("grandpy", data.message2 + data.message3);
                         addMsg("grandpy", data.message4);
+                        $('#map').css({display:"block"});
                         initMap(latitude, longitude);
                     }
+                    $(".loader").css({display:"none"});
+                    $(".test").css({display:"block"});
                 }
             );
         }
-        $(".input-group-append").css({visibility:"visible"});
     });
 });
 

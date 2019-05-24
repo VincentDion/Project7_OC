@@ -5,11 +5,11 @@ Goal of this project is to create a website with a back-end application that sim
 
 Note that the application is made for French speakers, sentences in english will not be correctly parsed and might be misinterpreted by a critical function of the programm. 
 
-# VERSION 1.0
+# VERSION 1.1
 
-First functional version of the application, not yet online. 
+Second functional version of the application, first to be deployed online. 
 
-Application will be live when the integrity of API keys will be ensured. Website link will be given then.
+Website link soon to be be given.
 
 # HOW TO TEST THE APPLICATION
 
@@ -19,14 +19,13 @@ To test the existing code, please follow these instructions :
 
 2) Obtain your own Google API Key and create a file in the application folder called api_key.py and inside create a variable called API_KEY containing a string of your api key.
 
-3) Run the main file (Grandpybot.py) and access the page with the browser at localhost adress
+3) Run the main file (Grandpybot.py) and access the page with the browser at localhost adress.
+
 NOTE : Since there are use of CDNs, you need a internet connection to ensure a proper display (bootstrap), or simply to have answers from wikipedia or Google.
 
 # KNOWN BUGS AND NECESSARY IMPROVEMENTS
 
 The followings items are actively looked upon and will be fixed really soon :
-- Map is displayed directly from the initial loading of the page, resulting in an error (since there is no coordinates yet), future version will have this hidden until first request.
-- I want the validate button to be hidden when application is already working on a previous request, or at least a loader indicating the programm is looking for something.
 - Although the programm is simulating a conversation, the lack of temporality (i.e all the answers given exactly together) make it clunky, might need to add some milliseconds of delay between each sentence.
 - Chat box needs to be auto-scrolled when reaching the bottom.
 

@@ -81,4 +81,4 @@ def home():
     return render_template('home.html', api_key=API_KEY)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

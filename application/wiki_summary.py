@@ -22,6 +22,8 @@ class WikiSummary:
         wikisearch = wikipedia.geosearch(latitude, longitude, results=1,
                                                               radius=100)
         anecdote = wikipedia.summary(wikisearch[0], sentences=2)
+        location_for_url = wikipedia.page(wikisearch[0])
+        required_url = location_for_url.url
         
         """ 
         Here a little workaround when wikipedia' summary is too short and there 
@@ -36,5 +38,6 @@ class WikiSummary:
         summary = " ".join(anecdote)
 
         return {
-            'summary' : summary
+            "summary" : summary,
+            "required_url" : required_url
         }

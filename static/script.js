@@ -5,7 +5,7 @@ $(function() {
             null;
         }
         else {
-            addMsg("user", userInput);
+            addMsg("user", userInput, null);
             $(".loader").css({display:"block"});
             $(".test").css({display:"none"});
             
@@ -20,15 +20,15 @@ $(function() {
                 function (data) {                           
 
                     if (data.error) {
-                        addMsg("grandpy", data.message1);
+                        addMsg("grandpy", data.message1, null);
                     }
                     else {
-                        addMsg("grandpy", data.message1 + data.message5);
+                        addMsg("grandpy", data.message1 + data.message5, null);
                         var latitude = data.latitude;
                         var longitude = data.longitude;
 
-                        addMsg("grandpy", data.message2 + data.message3);
-                        addMsg("grandpy", data.message4);
+                        addMsg("grandpy", data.message2 + data.message3, data.url);
+                        addMsg("grandpy", data.message4, null);
                         $('#map').css({display:"block"});
                         initMap(latitude, longitude);
                     }
@@ -40,7 +40,7 @@ $(function() {
     });
 });
 
-function addMsg(speaker, message) {
+function addMsg(speaker, message, url) {
     var chatElt = document.createElement("strong");
 
     if (speaker == "user"){
@@ -58,6 +58,14 @@ function addMsg(speaker, message) {
     div = document.createElement('div');
     div.classList.add("msg");
     div.appendChild(messageElt);
+
+    if (url !== null) {
+        var urlElt = document.createElement("a");
+        urlElt.href = url;
+        urlElt.appendChild(document.createTextNode(" (En savoir plus sur Wikipédia)"));
+
+        messageElt.appendChild(urlElt)
+    }
 
     document.getElementById("dialog_box").append(div);
 }

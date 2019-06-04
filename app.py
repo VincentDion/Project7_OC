@@ -58,10 +58,12 @@ def get_json():
             try:
                 summary_search = wiki_summary.summary_of_place(location_dict)
                 summary = summary_search.get('summary')
+                url = summary_search.get('required_url')
                 return jsonify(message1=random_msgs(LOCATION_FOUND_MSGS),
                                message5=address, 
                                message2=random_msgs(WIKIPEDIA_INTRO_MSGS),
                                message3=summary,
+                               url=url,
                                message4=random_msgs(SHOW_OFF_MSGS),
                                longitude=longitude,
                                latitude=latitude,

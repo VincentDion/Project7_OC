@@ -11,7 +11,6 @@ from application.message_generator import random_msgs
 # Import of constants
 from application.constants import APP_STOP_WORDS
 from application.constants import INSUFFICIENT_INPUT_MSGS
-from application.constants import START_SEARCH_MSGS
 from application.constants import NO_LOCATION_MSGS
 from application.constants import LOCATION_FOUND_MSGS
 from application.constants import WIKIPEDIA_INTRO_MSGS
@@ -60,7 +59,7 @@ def get_json():
                 summary = summary_search.get('summary')
                 url = summary_search.get('required_url')
                 return jsonify(message1=random_msgs(LOCATION_FOUND_MSGS),
-                               message5=address, 
+                               message5=address,
                                message2=random_msgs(WIKIPEDIA_INTRO_MSGS),
                                message3=summary,
                                url=url,
@@ -70,7 +69,7 @@ def get_json():
                                error=False)
             except IndexError:
                 return jsonify(message1=random_msgs(LOCATION_FOUND_MSGS),
-                               message5=address, 
+                               message5=address,
                                message2="",
                                message3=random_msgs(WIKIPEDIA_NOT_FOUND),
                                message4=random_msgs(SHOW_OFF_MSGS),
@@ -78,9 +77,11 @@ def get_json():
                                latitude=latitude,
                                error=False)
 
+
 @app.route('/')
 def home():
     return render_template('home.html', api_key=API_KEY)
+
 
 if __name__ == "__main__":
     app.run()

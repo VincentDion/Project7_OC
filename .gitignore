@@ -1,4 +1,4 @@
 /env
-/testdesfonctions.py
 /application/__pycache__
-
+/.pytest_cache
+/test/__pycache__

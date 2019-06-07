@@ -5,11 +5,15 @@ Goal of this project is to create a website with a back-end application that sim
 
 Note that the application is made for French speakers, sentences in english will not be correctly parsed and might be misinterpreted by a critical function of the programm. 
 
-# VERSION 1.1
+# VERSION 1.2
 
-Second functional version of the application, first to be deployed online. 
+Third functional version of the application, second to be deployed online. 
 
-Website link soon to be be given.
+Website link : https://vd-grandpybot-p7.herokuapp.com/
+
+# WHAT'S NEW
+
+Minor fixes and add of Wikipedia link when a request is successful.
 
 # HOW TO TEST THE APPLICATION
 
@@ -28,10 +32,6 @@ NOTE : Since there are use of CDNs, you need a internet connection to ensure a p
 The followings items are actively looked upon and will be fixed really soon :
 - Although the programm is simulating a conversation, the lack of temporality (i.e all the answers given exactly together) make it clunky, might need to add some milliseconds of delay between each sentence.
 - Chat box needs to be auto-scrolled when reaching the bottom.
-
-# TESTS
-
-Since one aspect of the project is to create tests, the test suite will be soon added to the Github repository. I was supposed to follow a TDD approach, but miserably failed at it when complexity increased.
 
 # SPECIAL THANKS
 

@@ -87,8 +87,8 @@ BASE_STOP_WORDS = [
 
 
 NEW_STOP_WORDS = [
-    '', '?', '!', '@', 'ca', 'trouve', 'salut', 'grandpy',
-    'connais', 'adresse', 'trouver', 'sais', 'déjà', 'deja', 'déja', 'déjà', ';'
+    '', '?', '!', '@', 'ca', 'trouve', 'salut', 'grandpy', 'connais',
+    'adresse', 'trouver', 'sais', 'déjà', 'deja', 'déja', 'déjà', ';'
 ]
 
 APP_STOP_WORDS = BASE_STOP_WORDS + NEW_STOP_WORDS

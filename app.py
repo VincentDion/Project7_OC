@@ -75,6 +75,7 @@ def get_json():
                                message4=random_msgs(SHOW_OFF_MSGS),
                                longitude=longitude,
                                latitude=latitude,
+                               url="",
                                error=False)
 
 

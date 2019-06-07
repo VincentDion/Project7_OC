@@ -1,9 +1,9 @@
 # -*- coding: Utf-8 -*
 
-#Built-in for splitting sentences with multiple separators
+# Built-in for splitting sentences with multiple separators
 import re
 
-#On précise le path sinon ça fait planter pytest
+# Path precision for pytest
 import sys
 sys.path.append('..')
 

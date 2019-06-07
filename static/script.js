@@ -59,7 +59,7 @@ function addMsg(speaker, message, url) {
     div.classList.add("msg");
     div.appendChild(messageElt);
 
-    if (url !== null) {
+    if (url !== null && url !== "") {
         var urlElt = document.createElement("a");
         urlElt.href = url;
         urlElt.appendChild(document.createTextNode(" (En savoir plus sur Wikipédia)"));

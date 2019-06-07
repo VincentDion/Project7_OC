@@ -4,6 +4,7 @@
 # https://pypi.org/project/wikipedia/
 import wikipedia
 
+
 class WikiSummary:
 
     def __init__(self):
@@ -24,10 +25,10 @@ class WikiSummary:
         anecdote = wikipedia.summary(wikisearch[0], sentences=2)
         location_for_url = wikipedia.page(wikisearch[0])
         required_url = location_for_url.url
-        
-        """ 
-        Here a little workaround when wikipedia' summary is too short and there 
-        is a title of a category, between ==, that appears. We want to delete 
+
+        """
+        Here a little workaround when wikipedia' summary is too short and there
+        is a title of a category, between ==, that appears. We want to delete
         at this point
         """
         anecdote = anecdote.split()
@@ -38,6 +39,6 @@ class WikiSummary:
         summary = " ".join(anecdote)
 
         return {
-            "summary" : summary,
-            "required_url" : required_url
+            "summary": summary,
+            "required_url": required_url
         }
